@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!-- metadata -->
+    <title><%= @title || 'Super Happy Dev House' %></title>
+
+    <!-- tech includes -->
+    <%= stylesheet_link_tag 'main', 'jquery.fancybox' %>
+    <%= javascript_include_tag 'jquery', 'jquery-ui', 'jrails', 'jquery.fancybox-1.2.1' %>
+
+  </head>
+  <div id="header">
+    <% unless @skip_default_header %>
+      SUPER HAPPY DEV HOUSE <span>9</span>
+      <%= image_tag 'shdh-logo.png', :style => 'width:50px; height:50px;' %>
+    <% end %>
+  </div>
+  <body>
+    <%= yield %>
+  </body>
+  <div id="bottombox">Footer</div>
+</html>

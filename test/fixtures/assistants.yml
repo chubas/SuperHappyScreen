@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  devhouse: 1
+  nickname: MyString
+  twitter: MyString
+  facebook: MyString
+  project_name: MyString
+
+two:
+  name: MyString
+  devhouse: 1
+  nickname: MyString
+  twitter: MyString
+  facebook: MyString
+  project_name: MyString

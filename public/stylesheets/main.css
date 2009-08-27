@@ -1,0 +1,181 @@
+html body {
+  font-family: "Dejavu Sans", Helvetica, Arial, sans-serif;
+  font-size:   small;
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  font-size: 40px;
+  color: #FF8900;
+  text-align: center;
+  padding: 20px;
+}
+
+#header span {
+  font-size: 50px;
+  color: #FFBA00;
+}
+
+#form_register_link {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  background: #EEF;
+  margin-bottom:20px;
+  padding:10px;
+  font-size: 150%;
+}
+
+#form_register_link a {
+  text-decoration: none;
+  font-color: #FF9933;
+}
+
+
+#leftbox {
+  float: left;
+  width: 48%;
+  margin: 5px 5px 5px 10px;
+}
+
+#rightbox {
+  float: right;
+  width: 48%;
+  margin: 5px 10px 5px 5px;
+}
+
+#bottombox {
+  clear: both;
+  margin: 10px;
+}
+
+#main_user_form {
+  background-color: #EEF;
+  padding: 10px;
+}
+
+#main_user_form div {
+  margin: 5px 0;
+  display: block;
+  clear: both;
+}
+
+#main_user_form label {
+  float: left;
+  width: 30%;
+  text-align: right;
+  margin-right: 1em;
+  padding: 5px;
+}
+
+#main_user_form input{
+  /*float: right;*/
+  width: 45%;
+}
+
+#main_user_form input#twitter {
+  width: 30% !important;
+}
+
+#main_user_form textarea {
+  width: 55%;
+}
+
+#main_user_form div span {
+  /*float: none;*/
+  /*clear: both;*/
+  /*display: block;*/
+}
+
+#main_user_form div span label {
+  /*float: none;*/
+  /*clear: both;*/
+  /*display: inline;*/
+}
+
+#registrant_twitter_avatar img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.boxtitle {
+  width: 100%;
+  margin:-10px -10px 10px -10px;
+  padding: 10px;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: right;
+  background-color: #EEF;
+}
+
+#wiki_content {
+  padding: 20px;
+  background-color: #EEF;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  clear: both;
+}
+
+.hint_small {
+  font-size: 80%;
+  font-style: italic;
+  color: #99A;
+}
+
+a img {
+  border: none;
+}
+
+#projects {
+  padding: 0 0 20px 10px;
+}
+
+#projects li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  list-style-type: none;
+}
+
+#projects a:link, #projects a:visited {
+  float: left;
+  line-height: 14px;
+  font-weight: bold;
+  margin: 0 10px 4px 10px;
+  text-decoration: none;
+  color: #999;
+}
+
+#projects a:link#current, #projects a:visited#current, #projects a:hover {
+  background: transparent;
+  color: #000;
+}
+
+#projects a:hover {
+  color: #000;
+}
+
+.tweet {
+  vertical-align: middle;
+  margin: 0;
+  min-height: 30px;
+}
+
+.tweet.even {
+  background-color: #CCF;
+}
+
+.tweet.odd {
+  background-color: #EFC;
+}
+
+.tweet span {
+  font-weight: bold;
+}
+
+.tweet img {
+  width: 30px;
+  margin-right: 10px;
+}

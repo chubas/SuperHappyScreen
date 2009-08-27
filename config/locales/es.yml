@@ -1,0 +1,20 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  pages:
+    registry_form:
+      present_yourself: 'Bienvenido. Presentate!'
+      name: 'Nombre'
+      nickname: 'Nickname'
+      twitter_same_as_nickname: 'Twitter igual que el nickname'
+      facebook_same_as_name: 'Facebook igual que tu nombre name'
+      facebook_same_as_nickname: 'or que tu nickname'
+      project_name: "Nombre de tu super proyecto"
+      project_description: '¿De qué se trata?'
+      open_form: "Regístrate!"
+    twitter_widget:
+      title: 'DevHouse en la twitósfera'
+    pbwiki_widget:
+      current_projects: "Proyectos registrados"
+      no_projects: "No hay proyectos aún. Apúntate!"

@@ -1,0 +1,15 @@
+## Example file of configuration parameters for setting up
+## the connection to your PBWorks wiki, Twitter account and other misc. parameters
+
+number:       1                     # Consecutive for the DevHouse number
+name:         "My first SHDH!"      # If your DevHouse has a 'name'
+folder_name:  SHDH9                 # Folder name of the PBWorks folder
+hashtag:      "#shdhmc"             # Hashtag of the devhouse you want twitter
+wiki:
+  name:       my_wiki_name          # Name of your wiki
+  read_key:   lHvQFgmpde7d7XJReX6y  # Read key of your wiki
+  write_key:  5r2TPZQm8LqDKYu7N73h  # Write key of your wiki
+  admin_key:  X5aUUQ3zQtzp6fygjrpS  # Admin key of your wiki
+twitter:
+  account:  my_twitter_account      # SHDH's 'official' Twitter account
+  password: my_password             # Passowrd of such account. TODO: Introduce OAUth

@@ -1,0 +1,18 @@
+<div class="box_section" id="pbwiki_widget">
+  <div class="boxtitle"> <%= t('.current_projects') %> </div>
+  <div class="project_list">
+    <% if pages.empty? %>
+      <%= t('.no_projects') %>
+    <% else %>
+      <ul id="projects">
+        <% pages.each do |page| %>
+          <li>
+            <%= link_to_remote page, :url => wiki_url(:page => page) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  <div id="wiki_content">
+  </div>
+</div>

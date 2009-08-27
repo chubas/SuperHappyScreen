@@ -1,0 +1,20 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  pages:
+    registry_form:
+      present_yourself: 'Welcome! Present yourself'
+      name: 'Your name'
+      nickname: 'Your nickname'
+      twitter_same_as_nickname: 'Twitter is same as your nickname'
+      facebook_same_as_name: 'Facebook is the same as your name'
+      facebook_same_as_nickname: 'or as your nickname'
+      project_name: "Your super cool project's name"
+      project_description: 'Tell us what is it about!'
+      open_form: "Register!"
+    twitter_widget:
+      title: 'What are they saying'
+    pbwiki_widget:
+      current_projects: "Current projects"
+      no_projects: "There are no projects yet. Create one!"

@@ -1,0 +1,102 @@
+<div id="form_register_link">
+  <%= link_to t('.open_form'), '#main_user_form_div', :id => "register_window_open" %>
+</div>
+<span style="clear:both;"/>
+
+<div id="main_user_form_div" class="box_section fixheight" style="display:none;">
+  <div class="boxtitle"> <%= t('.present_yourself') %> </div>
+  <% form_remote_tag :url => '/register', :html => {:id => 'main_user_form'} do %>
+    <div>
+      <%= label_tag :name, t('.name') %>
+      <%= text_field_tag :name %>
+    </div>
+
+    <div>
+      <%= label_tag :nickname, t('.nickname') %>
+      <%= text_field_tag :nickname %>
+    </div>
+
+    <div>
+      <%= label_tag :twitter, 'Twitter' %>
+      <%= text_field_tag :twitter %>
+      <span id="registrant_twitter_avatar"><img src='http://static.twitter.com/images/default_profile_bigger.png'></span>
+      <!--
+        <span>
+          <%# check_box_tag :twitter_same_as_nickname, '1', true %>
+          <%# label_tag :twitter_same_as_nickname, t('.twitter_same_as_nickname'), :class => 'hint_small' %>
+        </span>
+      -->
+    </div>
+
+    <div>
+      <%= label_tag :facebook, 'Facebook' %>
+      <%= text_field_tag :facebook %>
+      <!--
+      <span>
+        <%# check_box_tag :facebook_same_as_name, '1', true %>
+        <%# label_tag :facebook_same_as_name, t('.facebook_same_as_name'), :class => 'hint_small' %>
+      </span>
+      <span>
+        <%# check_box_tag :facebook_same_as_nickname %>
+        <%# label_tag :facebook_same_as_nickname, t('.facebook_same_as_nickname'), :class => 'hint_small' %>
+      </span>
+      -->
+    </div>
+
+    <div>
+      <%= label_tag :project_name, t('.project_name') %>
+      <%= text_field_tag :project_name %>
+    </div>
+
+    <div>
+      <%= label_tag :project_description, t('.project_description') %>
+      <%= text_area_tag :project_description, nil, :rows => 8, :columns => 40 %>
+    </div>
+
+    <div>
+      <%= submit_tag "I'm ready!" %>
+    </div>
+
+  <% end %>
+</div>
+<script type="text/javascript">
+  $(function() {
+    var show_avatar = function(name_field) {
+      $('#fancy_content #registrant_twitter_avatar').html("<img src='http://twivatar.org/" + name_field.target.value.replace("'", '&quot;') + "'/>");
+    };
+    /* Note that the #fancy_content selector in needed, because fancybox DUPLICATES the html content, effectively
+     * invalidating the concept of unique identifiers */
+    $('#register_window_open').fancybox({
+      hideOnContentClick  : false,
+      callbackOnShow      : function(){
+        $('#fancy_content #twitter').bind('change', show_avatar);
+      },
+      callbackOnClose     : function(){
+        $('#fancy_content #twitter').unbind('change', show_avatar);
+      },
+      frameWidth: 600
+    });
+  });
+</script>
+<script type="text/javascript">
+  /*
+  var sync_name_with_facebook = function(name_field) {
+    if($('#facebook_same_as_name')[0].checked) {
+      $("#facebook")[0].value = name_field.target.value.replace(/[^a-zA-Z]/g, '');
+    }
+  };
+  $('#main_user_form #name').change(sync_name_with_facebook);
+  $('#main_user_form #name').keyup(sync_name_with_facebook);
+
+  var sync_nickname_with_facebook_and_twitter = function(name_field) {
+    if($('#twitter_same_as_nickname')[0].checked) {
+      $("#twitter")[0].value = name_field.target.value;
+    }
+    if($('#facebook_same_as_nickname')[0].checked) {
+      $("#facebook")[0].value = name_field.target.value;
+    }
+  };
+  $('#main_user_form #nickname').change(sync_nickname_with_facebook_and_twitter);
+  $('#main_user_form #nickname').keyup(sync_nickname_with_facebook_and_twitter);
+  */
+</script>

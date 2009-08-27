@@ -1,0 +1,19 @@
+<div id="loading" style="display:none;"><%= image_tag 'loader.gif', :alt => "Loading..." %></div>
+<div id="notice">&nbsp;</div>
+
+<%= render :partial => 'registry_form' %>
+<div id="leftbox"><%= render :partial => 'pbwiki_widget', :locals => { :pages => @pages } %></div>
+<script type="text/javascript">
+  var get_wiki = function() {
+    $.ajax({
+      url: "/projects",
+      success: function(data) {
+        $('#pbwiki_widget').replaceWith(data);
+      }
+    });
+  };
+  get_wiki();
+  setInterval(get_wiki, 120 * 1000);
+</script>
+
+<div id="rightbox"><%= render :partial => 'twitter_widget' %></div>
