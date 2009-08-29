@@ -17,7 +17,7 @@
     </div>
 
     <div>
-      <%= label_tag :twitter, 'Twitter' %>
+      <%= label_tag :twitter, t('.twitter_name') %>
       <%= text_field_tag :twitter %>
       <span id="registrant_twitter_avatar"><img src='http://static.twitter.com/images/default_profile_bigger.png'></span>
       <!--
@@ -29,7 +29,7 @@
     </div>
 
     <div>
-      <%= label_tag :facebook, 'Facebook' %>
+      <%= label_tag :facebook, t('.facebook_name') %>
       <%= text_field_tag :facebook %>
       <!--
       <span>
@@ -74,29 +74,8 @@
       callbackOnClose     : function(){
         $('#fancy_content #twitter').unbind('change', show_avatar);
       },
-      frameWidth: 600
+      frameWidth: 600,
+      frameHeight: 390
     });
   });
-</script>
-<script type="text/javascript">
-  /*
-  var sync_name_with_facebook = function(name_field) {
-    if($('#facebook_same_as_name')[0].checked) {
-      $("#facebook")[0].value = name_field.target.value.replace(/[^a-zA-Z]/g, '');
-    }
-  };
-  $('#main_user_form #name').change(sync_name_with_facebook);
-  $('#main_user_form #name').keyup(sync_name_with_facebook);
-
-  var sync_nickname_with_facebook_and_twitter = function(name_field) {
-    if($('#twitter_same_as_nickname')[0].checked) {
-      $("#twitter")[0].value = name_field.target.value;
-    }
-    if($('#facebook_same_as_nickname')[0].checked) {
-      $("#facebook")[0].value = name_field.target.value;
-    }
-  };
-  $('#main_user_form #nickname').change(sync_nickname_with_facebook_and_twitter);
-  $('#main_user_form #nickname').keyup(sync_nickname_with_facebook_and_twitter);
-  */
 </script>

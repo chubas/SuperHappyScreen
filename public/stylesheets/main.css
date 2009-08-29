@@ -1,30 +1,35 @@
 html body {
-  font-family: "Dejavu Sans", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, "Dejavu Sans", sans-serif;
   font-size:   small;
   padding: 0;
   margin: 0;
 }
 
+body {
+  background: url(/images/page_bg.png) repeat-x;
+}
+
 #header {
-  font-size: 40px;
   color: #FF8900;
-  text-align: center;
   padding: 20px;
 }
 
-#header span {
-  font-size: 50px;
-  color: #FFBA00;
+#header-logo img {
+  vertical-align: bottom;
+  margin-left: 100px;
 }
 
 #form_register_link {
-  width: 100%;
   font-weight: bold;
   text-align: center;
-  background: #EEF;
-  margin-bottom:20px;
-  padding:10px;
-  font-size: 150%;
+  margin-bottom: 20px;
+  padding: 10px;
+  float: right;
+  font-size: 60px;
+  font-weight:bold;
+  margin-right: 120px;
+  margin-top: 40px;
+  text-align:center;
 }
 
 #form_register_link a {
@@ -32,6 +37,17 @@ html body {
   font-color: #FF9933;
 }
 
+
+/*****/
+
+#content {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #F9F9F9;
+  border: 3px solid #F0F0F0;
+  overflow: hidden;
+  padding: 0 20px;
+}
 
 #leftbox {
   float: left;
@@ -101,13 +117,14 @@ html body {
 }
 
 .boxtitle {
-  width: 100%;
-  margin:-10px -10px 10px -10px;
   padding: 10px;
   font-size: 120%;
   font-weight: bold;
   text-align: right;
-  background-color: #EEF;
+  background-color: #DDDDFF;
+  border: 2px solid #CECEFF;
+  
+  
 }
 
 #wiki_content {
@@ -161,21 +178,32 @@ a img {
   vertical-align: middle;
   margin: 0;
   min-height: 30px;
+  overflow: hidden;
+  clear: both;
+  padding: 5px;
+  border-bottom: 1px dotted #8aa
 }
 
 .tweet.even {
-  background-color: #CCF;
+  background-color: #F0F0FF;
 }
 
 .tweet.odd {
-  background-color: #EFC;
+  background-color: #F0FFF0;
 }
 
 .tweet span {
   font-weight: bold;
 }
 
+.tweet .tweet_user {
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
 .tweet img {
-  width: 30px;
+  width: 40px;
   margin-right: 10px;
+  float: left;
 }

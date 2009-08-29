@@ -6,18 +6,22 @@
     <title><%= @title || 'Super Happy Dev House' %></title>
 
     <!-- tech includes -->
-    <%= stylesheet_link_tag 'main', 'jquery.fancybox' %>
-    <%= javascript_include_tag 'jquery', 'jquery-ui', 'jrails', 'jquery.fancybox-1.2.1' %>
+    <%= stylesheet_link_tag 'main', 'jquery.fancybox', 'jquery.jgrowl' %>
+    <%= javascript_include_tag 'jquery', 'jquery-ui', 'jrails', 'jquery.fancybox-1.2.1', 'surprise', 'jquery.jgrowl-minimized' %>
 
   </head>
   <div id="header">
     <% unless @skip_default_header %>
-      SUPER HAPPY DEV HOUSE <span>9</span>
-      <%= image_tag 'shdh-logo.png', :style => 'width:50px; height:50px;' %>
+      <div id="header-logo">
+        <%= image_tag 'shdh-logo-full.png' %>
+        <%= render :partial => 'registry_form' %>
+      </div>
     <% end %>
   </div>
   <body>
-    <%= yield %>
+    <div id="content">
+      <%= yield %>
+    </div>
   </body>
   <div id="bottombox">Footer</div>
 </html>

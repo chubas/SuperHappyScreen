@@ -23,7 +23,7 @@ class PagesController < ApplicationController
       end
       if Assistant.find_by_name(params[:name])
         render :update do |page|
-          page.replace_html '#notice', 'Seems like you were already registered. Keep it up, dude!'
+          page << "$.jGrowl('Parece que ya te habías registrado!', {theme:'error'});"
           page << "$.fn.fancybox.close();"
         end
         return
@@ -38,12 +38,12 @@ class PagesController < ApplicationController
         twitter_update_status(@assistant)
         wiki_make_project_page(@assistant)
         render :update do |page|
-          page.replace_html '#notice', "Yay. Welcome!"
+          page << "$.jGrowl('Bienvenido!')"
           page << "$.fn.fancybox.close();"
         end
       else
         render :update do |page|
-          page.replace_html '#notice', 'Seems like you were already registered. Keep it up, dude!'
+          page << "$.jGrowl('Oooops. Algo salió mal. No te preocupes, creo que aún no has roto el internet...', {theme:'error'});"
         end
       end
     else
@@ -86,8 +86,9 @@ class PagesController < ApplicationController
 
   def twitter_update_status(who)
     hashtag = SHDH_SETTINGS[:hashtag]
-    tweet = "#{who.name} (@#{who.twitter}) ha llegado! "
-    tweet += "Trabajará en: #{who.project_name}" if who.project_name
+    name = who.twitter ? "@#{who.twitter}" : who.name
+    tweet = "#{name} ha llegado! "
+    tweet += "para trabajar en #{who.project_name}" if who.project_name
     tweet = truncate(tweet, 140 - (hashtag.size + 1))
     tweet += " #{hashtag}"
     TWITTER.update(tweet)

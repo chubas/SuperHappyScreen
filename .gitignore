@@ -1,2 +1,4 @@
 config/database.yml
 config/devhouse.yml
+*.log
+*.sqlite3

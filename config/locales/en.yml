@@ -7,6 +7,8 @@ en:
       present_yourself: 'Welcome! Present yourself'
       name: 'Your name'
       nickname: 'Your nickname'
+      twitter_name: 'Twitter username'
+      facebook_name: 'Facebook username'
       twitter_same_as_nickname: 'Twitter is same as your nickname'
       facebook_same_as_name: 'Facebook is the same as your name'
       facebook_same_as_nickname: 'or as your nickname'
